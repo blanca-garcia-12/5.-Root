@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class PolynomialRootChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read coefficients a, b, c and the value x
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        int x = scanner.nextInt();
+        
+        // Calculate the polynomial value at x
+        int polynomialValue = a * x * x + b * x + c;
+
+        // Use the ternary operator to determine the output
+        String result = (polynomialValue == 0) ? "root!" : "not root!";
+        
+        // Print the result
+        System.out.println(result);
+        
+        scanner.close();
+    }
+}
